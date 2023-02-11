@@ -69,11 +69,11 @@ body {
 }
 
 .item-content {
-    width: 70%;
+    width: 60%;
 }
 
 .item-info {
-    width: 30%;
+    width: 40%;
 }
 
 #pokeImg {
@@ -81,7 +81,7 @@ body {
     padding-top: 10%;
     margin-left: auto;
     margin-right: auto;    
-    width: 50%;
+    width: 30%;
 }
 
 .invisible {
