@@ -31,13 +31,6 @@ function siEs(pokeInputValue) {
     }
 }
 
-function pokeValue(si) {
-    if (si) pokeInput.style.border = '2px solid #000';
-    else {
-        pokeInput.style.border = '2px solid #f00';
-    }
-}
-
 function mostrarPokemon(pokemon) {
     pokemonCard.classList.remove("invisible");
     pokemonImg.setAttribute('src', pokemon.sprites.front_default);
