@@ -1,5 +1,5 @@
 <h1>Pokédex</h1>
-Ejercicio pendiente del bootcamp Generation<i>(en curso)</i>
+Ejercicio del bootcamp Generation para practicar JavaScript y consumo de API <i>(en curso)</i>
 
 <br>
 <h3>Capturas</h3>
