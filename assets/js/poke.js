@@ -11,7 +11,6 @@ async function obtenerPokemon() {
     let pokeInputValue = pokeInput.value.toLowerCase();
     if (!extension(pokeInputValue)) {
         pokeValue(false);
-        pokeError();
         return;
     }
     pokeValue(true);
@@ -19,7 +18,9 @@ async function obtenerPokemon() {
     if (poke.ok) {
         let pokeJson = await poke.json();
         mostrarPokemon(pokeJson); 
-    } return;
+    } else{
+        pokeError();
+    };
 }
 
 function extension(pokeInputValue) {
@@ -66,7 +67,8 @@ function mostrarPokemon(pokemon) {
 }
 
 function pokeError(){
+    if(pokError.className == "invisible"){
     pokError.classList.remove("invisible");
     pokemonCard.classList.add("invisible");
-    return 
+    }
 }
