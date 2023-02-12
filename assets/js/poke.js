@@ -8,7 +8,7 @@ const pokError = document.getElementById("pokError");
 pokError.classList.add("invisible");
 
 async function obtenerPokemon() {
-    let pokeInputValue = pokeInput.value;
+    let pokeInputValue = pokeInput.value.toLowerCase();
     if (!siEs(pokeInputValue)) {
         pokeValue(false);
         return;
