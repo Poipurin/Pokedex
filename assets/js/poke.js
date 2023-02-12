@@ -24,7 +24,7 @@ async function obtenerPokemon() {
 }
 
 function extension(pokeInputValue) {
-    if (pokeInputValue.length >= 4 && pokeInputValue.length < 13){
+    if (pokeInputValue.length >= 1 && pokeInputValue.length < 13){
         return true;
     } else {
         return false;
