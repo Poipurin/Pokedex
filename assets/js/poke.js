@@ -1,6 +1,6 @@
 const btnSubmit = document.getElementById("btnSubmit");
-btnSubmit.addEventListener('click', obtenerPokemon,);
-const pokeInput = document.getElementById("buscador");
+btnSubmit.addEventListener("click", obtenerPokemon,);
+const pokeInput = document.getElementById("pokemon");
 const pokemonImg = document.getElementById("pokeImg");
 const pokemonCard = document.getElementById("pokeCard");
 pokemonCard.classList.add("invisible");
@@ -9,8 +9,9 @@ pokError.classList.add("invisible");
 
 async function obtenerPokemon() {
     let pokeInputValue = pokeInput.value.toLowerCase();
-    if (!siEs(pokeInputValue)) {
+    if (!extension(pokeInputValue)) {
         pokeValue(false);
+        pokeError();
         return;
     }
     pokeValue(true);
@@ -21,26 +22,26 @@ async function obtenerPokemon() {
     } return;
 }
 
-/* function pokError(){
-    
-} */
-
-function siEs(pokeInputValue) {
-    if (pokeInputValue.length >= 1 && pokeInputValue.length < 13) return true;
-    else {
+function extension(pokeInputValue) {
+    if (pokeInputValue.length >= 4 && pokeInputValue.length < 13){
+        return true;
+    } else {
         return false;
     }
 }
 
-function pokeValue(si) {
-    if (si) pokeInput.style.border = '';
+function pokeValue(correcto) {
+    if (correcto) pokeInput.style.border = '2px solid #2C2D9A';
     else {
-        pokeInput.style.border = '';
+        pokeInput.style.border = '2px solid #f00';
     }
 }
 
+
+
 function mostrarPokemon(pokemon) {
     pokemonCard.classList.remove("invisible");
+    pokError.classList.add("invisible");
     pokemonImg.setAttribute('src', pokemon.sprites.versions['generation-v']['black-white'].animated.front_default);
     document.getElementById("nombre").textContent = pokemon.name;
     document.getElementById("id").textContent = pokemon.id;
@@ -62,7 +63,10 @@ function mostrarPokemon(pokemon) {
     });
     let habStr = nombreHab.toString();
     document.getElementById("habilidades").textContent = habStr;
-
 }
 
-
+function pokeError(){
+    pokError.classList.remove("invisible");
+    pokemonCard.classList.add("invisible");
+    return 
+}

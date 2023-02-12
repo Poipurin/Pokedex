@@ -13,45 +13,48 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
     <title>Pokédex</title>
+
 </head>
 <header>
     <img class="centerImg" src="/assets/img/Pokédex_logo.png" alt="Pokédex">
 
 </header>
-
-<body>
-    <nav>
-        <div class="input">
-            <form action="">
-                <label for="pokemon">Ingrese el nombre o número del pokémon (hasta la V generación)</label></br>
-                <input type="text" id="pokemon" name="pokemon" placeholder="ej.: Charmander"><input id="btnSubmit"
-                    type="button" value="Buscar">
-            </form>
-        </div>
-    </nav>
-    <div class="container-fluid">
-
+<nav>
+    <div class="input" id="input">
+        <form action="">
+            <label for="pokemon">Ingrese el nombre o número del pokémon (hasta la V generación)</label></br>
+            <input type="text" id="pokemon" name="pokemon" placeholder="ej.: Charmander"><input id="btnSubmit"
+                type="button" value="Buscar">
+        </form>
     </div>
-    <div id="pokeCard">
-        <img src="" id="pokeImg">
-        <div class="card-container">
-            <p id="nombre"></p>
-            <p class="id item-content">N°:</p>
-            <p class="item-info" id="id"></p>
-            <p class="altura item-content">Altura:</p>
-            <p class="item-info" id="altura"></p>
-            <p class="peso item-content">Peso:</p>
-            <p class="item-info" id="peso"></p>
-            <p class="tipo item-content">Tipo:</p>
-            <p class="item-info" id="tipo"></p>
-            <p class="habilidades item-content">Habilidades:</p>
-            <p class="item-info" id="habilidades"></p>
-        </div>
+</nav>
+<div class="container-fluid">
+
+</div>
+<div id="pokeCard">
+    <img src="" id="pokeImg">
+    <div class="card-container">
+        <p id="nombre"></p>
+        <p class="id item-content">N°:</p>
+        <p class="item-info" id="id"></p>
+        <p class="altura item-content">Altura:</p>
+        <p class="item-info" id="altura"></p>
+        <p class="peso item-content">Peso:</p>
+        <p class="item-info" id="peso"></p>
+        <p class="tipo item-content">Tipo:</p>
+        <p class="item-info" id="tipo"></p>
+        <p class="habilidades item-content">Habilidades:</p>
+        <p class="item-info" id="habilidades"></p>
     </div>
-    <script src="/assets/js/poke.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+</div>
+<div id="pokError">
+    <img src="https://media.tenor.com/cTIm814jXBsAAAAj/kabuto-pokemon.gif" alt="error" height="200px"><br>
+    No existe ese pokémon <i>(aún)</i>
+</div>
+<script src="/assets/js/poke.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
 
 </body>
 
