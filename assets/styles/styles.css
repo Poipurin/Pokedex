@@ -1,8 +1,15 @@
 header{
     background-color: rgb(226, 49, 36);
     padding: 2rem;
+    overflow: hidden;
+    position: fixed;
+    top: 0; 
+    width: 100%; /* Full width */
+    box-shadow: 0px 1px 10px #999;
+    
 }
 body {
+    margin-top: 15rem;
     background-color: rgb(228, 226, 226);
     font-family: VT323;
 }
