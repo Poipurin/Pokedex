@@ -4,7 +4,7 @@ Ejercicio del bootcamp Generation para practicar JavaScript y consumo de API <i>
 <br>
 <h3>Capturas</h3>
 Index
-<img src="https://i.ibb.co/tBcd3Q5/screencapture-127-0-0-1-5500-index-html-2023-02-11-06-52-21.png"><br>
+<img src="https://i.ibb.co/kSs4Jxy/screencapture-steady-crumble-4ff20d-netlify-app-2023-02-13-03-17-30.png"><br>
 Pokémon
 <img src="https://i.ibb.co/mHmmHs9/screencapture-steady-crumble-4ff20d-netlify-app-2023-02-11-21-34-31.png"><br>
 Error
