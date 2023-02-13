@@ -1,17 +1,20 @@
 const btnSubmit = document.getElementById("btnSubmit");
-btnSubmit.addEventListener("click", obtenerPokemon,);
+btnSubmit.addEventListener("click", obtenerPokemon);
 const pokeInput = document.getElementById("pokemon");
 const pokemonImg = document.getElementById("pokeImg");
 const pokemonCard = document.getElementById("pokeCard");
 pokemonCard.classList.add("invisible");
 const pokError = document.getElementById("pokError");
 pokError.classList.add("invisible");
+const pokeIndex = document.getElementsById("pokeIndex");
+pokeIndex.classList.add("invisible");
+
+
 
 async function obtenerPokemon() {
     let pokeInputValue = pokeInput.value.toLowerCase();
     if (!extension(pokeInputValue)) {
         pokeValue(false);
-        return;
     }
     pokeValue(true);
     let poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokeInputValue}`);
@@ -27,7 +30,7 @@ function extension(pokeInputValue) {
     if (pokeInputValue.length >= 1 && pokeInputValue.length < 13){
         return true;
     } else {
-        return false;
+    return false;
     }
 }
 

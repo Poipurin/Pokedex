@@ -12,25 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <title>Pokédex</title>
-
 </head>
 <header>
-    <img class="centerImg" src="/assets/img/Pokédex_logo.png" alt="Pokédex">
+    <a href="https://steady-crumble-4ff20d.netlify.app"><img class="centerImg" src="/assets/img/Pokédex_logo.png" alt="Pokédex"></a>
 
 </header>
 <nav>
+
     <div class="input" id="input">
-        <form action="">
+        <form action="/">
             <label for="pokemon">Ingrese el nombre o número del pokémon (hasta la V generación)</label></br>
             <input type="text" id="pokemon" name="pokemon" placeholder="ej.: Charmander"><input id="btnSubmit"
                 type="button" value="Buscar">
         </form>
     </div>
 </nav>
-<div class="container-fluid">
 
-</div>
 <div id="pokeCard">
     <img src="" id="pokeImg">
     <div class="card-container">
@@ -48,14 +48,35 @@
     </div>
 </div>
 <div id="pokError">
-    <img src="https://64.media.tumblr.com/aafaa51f0db7ddcdb2a315b34ef33ec1/tumblr_nsrxqn0Kkj1u9vkxto1_500.gifv" alt="error" height="200px"><br>
+    <img src="https://64.media.tumblr.com/aafaa51f0db7ddcdb2a315b34ef33ec1/tumblr_nsrxqn0Kkj1u9vkxto1_500.gifv"
+        alt="error" height="200px"><br>
     No existe ese pokémon <i>(aún)</i>
+</div>
+<div class="container" id="pokeIndex">
+    <img class="centerImg" src="/assets/img/pokemonlogo.png"  width="300px" alt="pokémon">
 </div>
 <script src="/assets/js/poke.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-
+    <script>
+        $(document).ready(function () {
+                for (let i = 1; i <= 649; i++) {
+                    $(".container").append(
+                        ' <img id="'+i+'" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/'+i+'.gif" alt="pokemon">'
+                    );
+                }
+                //ajax
+                // $.get(URL,FUNCION,FORMATO JSON); ESTRUCTURA
+                /* $('img').click(function(){
+                    let id = $(this).attr("id");
+                    let name =$(this).attr("name");
+                    alert(id, name);
+                });  */
+    
+                //cierre de jquery
+            });
+        </script>
 </body>
 
 </html>
