@@ -111,3 +111,9 @@ body {
     text-align: center;
     color:red;
 }
+
+.home{
+    margin-left: auto;
+    display: block;
+    height: 35px;
+}
