@@ -6,8 +6,8 @@ const pokemonCard = document.getElementById("pokeCard");
 pokemonCard.classList.add("invisible");
 const pokError = document.getElementById("pokError");
 pokError.classList.add("invisible");
-const pokeIndex = document.getElementsById("pokeIndex");
-pokeIndex.classList.add("invisible");
+const indexPoke = document.getElementById("pokeIndex");
+
 
 
 
@@ -46,6 +46,7 @@ function pokeValue(correcto) {
 function mostrarPokemon(pokemon) {
     pokemonCard.classList.remove("invisible");
     pokError.classList.add("invisible");
+    indexPoke.classList.add("invisible");
     pokemonImg.setAttribute('src', pokemon.sprites.versions['generation-v']['black-white'].animated.front_default);
     document.getElementById("nombre").textContent = pokemon.name;
     document.getElementById("id").textContent = pokemon.id;
@@ -73,5 +74,6 @@ function pokeError(){
     if(pokError.className == "invisible"){
     pokError.classList.remove("invisible");
     pokemonCard.classList.add("invisible");
+    indexPoke.classList.add("invisible");
     }
 }
